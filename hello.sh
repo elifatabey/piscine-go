@@ -1,2 +1,2 @@
-#1 /bin/bash
-echo "hello elifatabey!"
+#! /bin/bash
+echo "hello atabeyelif!"
