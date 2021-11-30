@@ -1,0 +1,1 @@
+ls -A -p -lt --time=creation -m
