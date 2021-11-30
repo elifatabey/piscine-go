@@ -1,1 +1,2 @@
-curl -s https://learn.01founders.co/api/graphq1-engine/v1/graphq1 --data '{"query":"{user(where:{login:{_eg:\"atabeyelif\"}}){id}}"}'
+#! /bin/bash
+curl -s https://learn.01founders.co/api/graphql-engine/v1/graphql --data '{"query":"{user(where:{login:{_eq:\"atabeyelif\"}}){id}}"}' | cut -d ":" -f4 | cut -d "}" -f1
