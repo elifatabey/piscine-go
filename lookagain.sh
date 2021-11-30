@@ -1,2 +1,2 @@
 #! /bin/bash
-find -name "*.sh" | cut -d "/" -f2 | cut -d "." -f1
+find -name "*.sh" | rev | cut -d "/" -f1 | sort -r | rev | cut -d "." -f1
