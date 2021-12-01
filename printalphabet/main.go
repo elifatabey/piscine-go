@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	alph := []rune("abcdefjhijklmnopqrstuvwxyz")
+	alph := []rune("abcdefghijklmnopqrstuvwxyz")
 	for i := 0; i < 26; i++ {
 		z01.PrintRune(alph[i])
 	}
