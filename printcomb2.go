@@ -7,9 +7,7 @@ import (
 func PrintComb2() {
 	num := []rune("0123456789")
 	for i := 0; i <= 9; i++ {
-
 		for j := 0; j <= 9; j++ {
-
 			if i == 9 && j == 9 {
 				z01.PrintRune(num[i])
 				z01.PrintRune(num[j])
