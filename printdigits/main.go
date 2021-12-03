@@ -5,12 +5,8 @@ import (
 )
 
 func main() {
-	num := []rune("0123456789")
-	i := 0
-	for i <= 9 {
-		z01.PrintRune(num[i])
-		i++
+	for i := '0'; i <= '9'; i++ {
+		z01.PrintRune(i)
 	}
-
 	z01.PrintRune('\n')
 }
