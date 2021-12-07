@@ -31,5 +31,4 @@ func IsAlpha(s string) bool {
 		}
 	}
 	return false
-
 }
