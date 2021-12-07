@@ -31,5 +31,4 @@ func IsPrintable(s string) bool {
 		}
 	}
 	return false
-
 }
