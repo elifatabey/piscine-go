@@ -5,6 +5,7 @@ import (
 
 	"github.com/01-edu/z01"
 )
+
 func main() {
 	program := os.Args[1]
 	for _, r := range program {
