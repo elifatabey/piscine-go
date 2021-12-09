@@ -1,7 +1,7 @@
 package piscine
 
 func Capitalize(s string) string {
-	L := ToLower(s) // the function I write to make every letter to lower case.
+	L := ToLower(s)
 	runeL := []rune(L)
 	len := len(runeL) - 1
 	Lnew := Concat(ToUpper(string(L[0])), string(runeL[1:len]))
@@ -20,5 +20,6 @@ func Capitalize(s string) string {
 			}
 		}
 	}
+	newstrings = append(newstrings, LnewS[len-1])
 	return string(newstrings)
 }
