@@ -3,7 +3,7 @@ package piscine
 func Capitalize(s string) string {
 	L := ToLower(s)
 	runeL := []rune(L)
-	len := len(runeL) - 1
+	len := len(runeL)
 	Lnew := Concat(ToUpper(string(L[0])), string(runeL[1:len]))
 	LnewS := []rune(Lnew)
 	newstrings := []rune{}
@@ -20,6 +20,5 @@ func Capitalize(s string) string {
 			}
 		}
 	}
-	newstrings = append(newstrings, LnewS[len-1])
 	return string(newstrings)
 }
