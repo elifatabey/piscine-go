@@ -12,11 +12,14 @@ func Capitalize(s string) string {
 			newstrings = append(newstrings, LnewS[i])
 		} else {
 			newstrings = append(newstrings, LnewS[i])
-			if LnewS[i+1] == rune(32) {
-				newstrings = append(newstrings)
-			}
-			if IsLower(string(LnewS[i+1])) {
-				LnewS[i+1] = LnewS[i+1] - rune(32)
+			if i+1 > len-1 {
+			} else {
+				if LnewS[i+1] == rune(32) {
+					newstrings = append(newstrings)
+				}
+				if IsLower(string(LnewS[i+1])) {
+					LnewS[i+1] = LnewS[i+1] - rune(32)
+				}
 			}
 		}
 	}
