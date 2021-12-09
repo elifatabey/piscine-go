@@ -18,7 +18,7 @@ func main() {
 			}
 		}
 	}
-	for i := 1; i < len(program); i++ {
+	for i := 0; i < len(program); i++ {
 		for _, r := range program[i] {
 			// if i > 1 {
 			z01.PrintRune(r)
