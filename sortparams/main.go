@@ -10,7 +10,7 @@ func main() {
 	program := os.Args
 
 	for i := len(program); i > 0; i-- {
-		for j := 1; j < i; j++ {
+		for j := 2; j < i; j++ {
 			if program[j-1] > program[j] {
 				middle := program[j]
 				program[j] = program[j-1]
