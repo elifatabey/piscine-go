@@ -4,7 +4,6 @@ import "github.com/01-edu/z01"
 
 func PrintNbrInOrder(n int) {
 	var nums []int
-	l := len(nums)
 	if n < 0 {
 		return
 	} else if n == 0 {
@@ -15,8 +14,8 @@ func PrintNbrInOrder(n int) {
 		n /= 10
 	}
 
-	for i := 0; i < l-1; i++ {
-		for j := 0; j < l-1; j++ {
+	for i := 0; i < len(nums)-1; i++ {
+		for j := 0; j < len(nums)-1; j++ {
 			if nums[j] > nums[j+1] {
 				nums[j], nums[j+1] = nums[j+1], nums[j]
 			}
