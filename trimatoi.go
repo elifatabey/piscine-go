@@ -6,7 +6,7 @@ func TrimAtoi(s string) int {
 	for i := range s {
 		if i >= 48 && i <= 57 {
 			total *= 10
-			total += i - '0'
+			total += int(i - '0')
 		}
 		if i == '-' && i == 0 {
 			negative *= -1
