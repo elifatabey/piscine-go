@@ -13,7 +13,7 @@ func Capitalize(s string) string {
 		runes[0] = runes[0] - rune(32)
 	}
 	for i := range runes {
-		if runes[i] >= 32 && runes[i] <= 127 {
+		if runes[i] >= 48 && runes[i] <= 57 || runes[i] >= 65 && runes[i] <= 90 || runes[i] >= 97 && runes[i] <= 122 {
 			snew = append(snew, runes[i])
 		} else {
 			snew = append(snew, runes[i])
