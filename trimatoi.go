@@ -3,7 +3,7 @@ package piscine
 func TrimAtoi(s string) int {
 	total := 0
 	negative := 1
-	for i := range s {
+	for _, i := range s {
 		if i >= 48 && i <= 57 {
 			total *= 10
 			total += int(i - '0')
