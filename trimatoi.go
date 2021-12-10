@@ -8,7 +8,7 @@ func TrimAtoi(s string) int {
 			total *= 10
 			total += int(i - '0')
 		}
-		if i == '-' && i == 0 {
+		if i == 45 && total == 0 {
 			negative *= -1
 		}
 	}
