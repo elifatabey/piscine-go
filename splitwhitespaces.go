@@ -31,5 +31,5 @@ func SplitWhiteSpaces(s string) []string {
 }
 
 func isWhiteSpace(r rune) bool {
-	return ( r == ' ' || r == '\n' || r == '\t' || r == 0)
+	return (r == ' ' || r == '\n' || r == '\t' || r == 0)
 }
