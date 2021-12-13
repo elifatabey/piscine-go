@@ -7,7 +7,9 @@ func SplitWhiteSpaces(s string) []string {
 	result := ""
 	for c := range s {
 		if isWhiteSpace(rune(s[c])) {
-			countWords++
+			if c == ' ' && s[c+1] != ' ' {
+				countWords++
+			}
 		}
 		lenStr++
 	}
@@ -26,9 +28,7 @@ func SplitWhiteSpaces(s string) []string {
 				}
 			}
 		} else {
-			if result != "" {
-				result += string(c)
-			}
+			result += string(c)
 		}
 	}
 	return final
