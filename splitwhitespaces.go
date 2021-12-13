@@ -17,14 +17,18 @@ func SplitWhiteSpaces(s string) []string {
 		if j+1 == lenStr {
 			final[i] = result + string(s[j])
 		}
-		if isWhiteSpace(rune(s[j])) {
+		if isWhiteSpace(rune(c)) {
 			if i <= countWords {
-				final[i] = result
-				i++
-				result = ""
+				if result != "" {
+					final[i] = result
+					i++
+					result = ""
+				}
 			}
 		} else {
-			result += string(c)
+			if result != "" {
+				result += string(c)
+			}
 		}
 	}
 	return final
