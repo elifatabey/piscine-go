@@ -30,7 +30,7 @@ func SplitWhiteSpaces(s string) []string {
 	return final
 }
 
-func isWhiteSpace(r byte) bool {
+func isWhiteSpace(r rune) bool {
 	if r == ' ' || r == '\n' || r == '\t' || r == 0 {
 		return true
 	}
