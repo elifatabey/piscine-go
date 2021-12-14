@@ -21,7 +21,6 @@ func Split(s, sep string) []string {
 }
 
 func Charset(s, sep string, i int) bool {
-
 	j := 0
 	for j < len(sep) && i < len(s) {
 		if s[i] != sep[j] {
