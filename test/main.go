@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.FindNextPrime(93260))
-	fmt.Println(piscine.FindNextPrime(4))
+	s := "HelloHAhowHAareHAyou?"
+	fmt.Printf("%#v\n", piscine.Split(s, "HA"))
 }

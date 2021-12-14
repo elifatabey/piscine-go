@@ -13,15 +13,14 @@ func PrintNbrInOrder(n int) {
 		nums = append(nums, n%10)
 		n /= 10
 	}
-
 	for i := 0; i < len(nums)-1; i++ {
 		for j := 0; j < len(nums)-1; j++ {
 			if nums[j] > nums[j+1] {
 				nums[j], nums[j+1] = nums[j+1], nums[j]
 			}
 		}
-	}
-	for _, digit := range nums {
-		z01.PrintRune(rune(digit + 48))
+		for _, digits := range nums {
+			z01.PrintRune(rune(digits + 48))
+		}
 	}
 }
