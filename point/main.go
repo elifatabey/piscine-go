@@ -10,7 +10,7 @@ type point struct {
 }
 
 func setPoint(ptr *point) {
-	ptr.x = 42
+	ptr.x = 4
 	ptr.y = 21
 }
 
