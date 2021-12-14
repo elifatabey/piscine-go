@@ -12,6 +12,7 @@ func printStr(s string) {
 	}
 	z01.PrintRune('\n')
 }
+
 func isEven(nbr int) bool {
 	if nbr == 1 {
 		return true
