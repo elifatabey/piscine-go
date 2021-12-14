@@ -28,6 +28,7 @@ func main() {
 
 	result := []rune{}
 	if len == 1 {
+		z01.PrintRune('\n')
 	} else {
 		if program[1] == "--upper" {
 			for i := 2; i < len; i++ {
@@ -48,9 +49,9 @@ func main() {
 				}
 			}
 		}
+		for _, j := range result {
+			z01.PrintRune(j)
+		}
+		z01.PrintRune('\n')
 	}
-	for _, j := range result {
-		z01.PrintRune(j)
-	}
-	z01.PrintRune('\n')
 }
