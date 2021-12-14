@@ -28,7 +28,6 @@ func main() {
 
 	result := []rune{}
 	if len == 1 {
-		z01.PrintRune(' ')
 	} else {
 		if program[1] == "--upper" {
 			for i := 2; i < len; i++ {
