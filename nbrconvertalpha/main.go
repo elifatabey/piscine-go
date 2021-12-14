@@ -26,13 +26,6 @@ func main() {
 	Cap := []rune("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 	Low := []rune("abcdefghijklmnopqrstuvwxyz")
 
-	for i := 1; i < len; i++ {
-		num := strTOint(program[i])
-		if num > 26 || num < 1 {
-			z01.PrintRune(' ')
-		}
-	}
-
 	result := []rune{}
 	if program[1] == "--upper" {
 		for i := 2; i < len; i++ {
