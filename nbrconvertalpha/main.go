@@ -30,26 +30,26 @@ func main() {
 	if len == 1 {
 		z01.PrintRune(' ')
 	} else {
-	if program[1] == "--upper" {
-		for i := 2; i < len; i++ {
-			num := strTOint(program[i])
-			if num > 26 || num < 1 {
-				result = append(result, rune(32))
-			} else {
-				result = append(result, Cap[num-1])
+		if program[1] == "--upper" {
+			for i := 2; i < len; i++ {
+				num := strTOint(program[i])
+				if num > 26 || num < 1 {
+					result = append(result, rune(32))
+				} else {
+					result = append(result, Cap[num-1])
+				}
 			}
-		}
-	} else {
-		for i := 1; i < len; i++ {
-			num := strTOint(program[i])
-			if num > 26 || num < 1 {
-				result = append(result, rune(32))
-			} else {
-				result = append(result, Low[num-1])
+		} else {
+			for i := 1; i < len; i++ {
+				num := strTOint(program[i])
+				if num > 26 || num < 1 {
+					result = append(result, rune(32))
+				} else {
+					result = append(result, Low[num-1])
+				}
 			}
 		}
 	}
-}
 	for _, j := range result {
 		z01.PrintRune(j)
 	}
