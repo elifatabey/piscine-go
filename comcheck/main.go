@@ -15,7 +15,7 @@ func main() {
 			}
 		}
 	}
-	if count > 1 {
+	if count >= 1 {
 		fmt.Println("Alert!!!")
 	}
 }
