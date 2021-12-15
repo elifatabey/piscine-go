@@ -13,7 +13,7 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 				count = append(count, 2)
 			}
 		}
-		for i := range count {
+		for i := 0; i < len(a)-1; i++ {
 			if count[i] == count[i+1] {
 				return false
 			}
