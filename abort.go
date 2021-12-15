@@ -9,8 +9,10 @@ func Abort(a, b, c, d, e int) int {
 	collect[4] = e
 
 	for i := 0; i < 4; i++ {
-		if collect[i] > collect[i+1] {
-			collect[i], collect[i+1] = collect[i+1], collect[i]
+		for j := i + 1; j < 5; j++ {
+			if collect[i] > collect[j] {
+				collect[i], collect[j] = collect[j], collect[i]
+			}
 		}
 	}
 	return collect[2]
