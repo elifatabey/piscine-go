@@ -1,13 +1,20 @@
 package piscine
 
 func IsSorted(f func(a, b int) int, a []int) bool {
-	count := true
+	var count []bool
 	for i := range a {
 		if i != len(a)-1 {
 			if f(a[i], a[i+1]) > 0 || f(a[i], a[i+1]) < 0 {
-				count = false
+				count = append(count, true)
+			} else {
+				count = append(count, false)
 			}
 		}
 	}
-	return count
+	for _, any := range count {
+		if any == false {
+			return false
+		}
+	}
+	return true
 }
