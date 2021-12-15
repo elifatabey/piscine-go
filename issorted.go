@@ -12,9 +12,9 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 		}
 	}
 	for _, any := range count {
-		if any == false {
-			return false
+		if any == true {
+			return true
 		}
 	}
-	return true
+	return false
 }
