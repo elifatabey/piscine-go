@@ -9,7 +9,8 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 			}
 			if f(a[i], a[i+1]) < 0 {
 				count = append(count, 1)
-			} else {
+			}
+			if f(a[i], a[i+1]) == 0 {
 				count = append(count, 2)
 			}
 		}
