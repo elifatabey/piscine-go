@@ -15,7 +15,7 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 			}
 		}
 	}
-	for i := 0; i < len(count); i++ {
+	for i := 0; i < len(count)-1; i++ {
 		if count[i] != count[i+1] {
 			return false
 		}
