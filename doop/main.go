@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 	"strconv"
 )
@@ -25,49 +24,64 @@ func main() {
 			nb2, err2 := strconv.Atoi(args[2])
 			if nb1 >= 9223372036854775807 || nb1 <= -9223372036854775807 || nb2 >= 9223372036854775807 || nb2 <= -9223372036854775807 {
 			} else {
-				if err == nil && err2 == nil {
+				if err == nil || err2 == nil {
 					switch args[1] {
 					case "+":
 						result := nb1 + nb2
 						if result-nb2 != nb1 {
 						} else {
-							fmt.Println(nb1 + nb2)
+							changetoString(result)
 						}
 					case "-":
 						result := nb1 - nb2
 						if result+nb2 != nb1 {
 						} else {
-							fmt.Println(nb1 - nb2)
+							changetoString(result)
 						}
 					case "/":
 						if nb2 == 0 {
-							fmt.Println("No division by 0")
+							os.Stderr.WriteString("No division by 0")
+							os.Stderr.WriteString("\n")
+							return
 						} else {
 							result := nb1 / nb2
 							if result*nb2 != nb1 {
 							} else {
-								fmt.Println(result)
+								changetoString(result)
 							}
 						}
 					case "%":
 						if nb2 == 0 {
-							fmt.Println("No Modulo by 0")
+							os.Stderr.WriteString("No modulo by 0")
+							os.Stderr.WriteString("\n")
+							return
 						} else {
-							fmt.Println(nb1 % nb2)
+							result := nb1 % nb2
+							changetoString(result)
 						}
 					case "*":
 						result := nb1 * nb2
 						if result/nb2 != nb1 {
 						} else {
-							fmt.Println(nb1 * nb2)
+							changetoString(result)
 						}
 					}
 				} else {
-					fmt.Println("1")
+					os.Stderr.WriteString("0")
+					os.Stderr.WriteString("\n")
+					return
 				}
 			}
 		} else {
-			fmt.Println("0")
+			os.Stderr.WriteString("0")
+			os.Stderr.WriteString("\n")
+			return
 		}
 	}
+}
+
+func changetoString(nbr int) string {
+	var output string
+	output = strconv.Itoa(nbr)
+	return output + "\n"
 }
