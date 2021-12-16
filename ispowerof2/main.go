@@ -1,9 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"os"
 	"strconv"
+
+	"github.com/01-edu/z01"
 )
 
 func isPowerOf2(n int) bool {
@@ -13,6 +14,10 @@ func isPowerOf2(n int) bool {
 func main() {
 	if len(os.Args) == 2 {
 		nbr, _ := strconv.Atoi(os.Args[1])
-		fmt.Println(isPowerOf2(nbr))
+		s := strconv.FormatBool(isPowerOf2(nbr))
+		for _, char := range s {
+			z01.PrintRune(char)
+		}
+		z01.PrintRune('\n')
 	}
 }
